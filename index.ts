@@ -1,5 +1,6 @@
-//Exercise 1
+//Exercise 1 y 2
 document.querySelector('#buttonJoke').addEventListener('click', getData);
+const contentJoke = <HTMLElement>document.querySelector('#contentJoke');
 const petition = {
    method: 'GET',
    headers: {
@@ -11,10 +12,13 @@ function getData(){
     fetch('https://icanhazdadjoke.com', petition)
     .then(result => result.json())
     .then(data => {
-        data.joke;
-        console.log(data.joke);
+        contentJoke.innerText = data.joke;
+        //console.log(data.joke);
     })
     .catch(error => {
         console.log('Ha ocurrido un error', error);
     });
 }
+
+
+
