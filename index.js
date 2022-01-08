@@ -32,3 +32,18 @@ function getVote(id) {
     console.log(reportJokes);
     reportJokes.push(properties);
 }
+//Exercise 4
+var num = document.querySelector('#num');
+var weather_icon = document.querySelector('#weather_icon');
+function getWeather() {
+    fetch("https://api.openweathermap.org/data/2.5/weather?id=3128760&appid=8457934f6de289917f70175b39793167")
+        .then(function (result) { return result.json(); })
+        .then(function (data) {
+        num.textContent = Math.floor((data.main.temp) - 273, 15); //become from Celsius to Degrees
+        console.log(data);
+        weather_icon.innerHTML = "<img class=\"imge pe-5\" src=\"./icons/".concat(data.weather[0].icon, ".png\">");
+    })["catch"](function (error) {
+        console.log(error);
+    });
+}
+getWeather();

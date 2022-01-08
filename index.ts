@@ -38,3 +38,19 @@ function getVote(id: number) {
     reportJokes.push(properties);
 }
 
+//Exercise 4
+const num = <HTMLElement>document.querySelector('#num');
+const weather_icon = <HTMLElement>document.querySelector('#weather_icon');
+function getWeather(){
+    fetch("https://api.openweathermap.org/data/2.5/weather?id=3128760&appid=8457934f6de289917f70175b39793167")
+    .then(result => result.json())    
+    .then(data => {
+        num.textContent = Math.floor((data.main.temp) -273,15); //become from Celsius to Degrees
+        console.log(data);
+        weather_icon.innerHTML = `<img class="imge pe-5" src="./icons/${data.weather[0].icon}.png">`
+    })
+    .catch(error => {
+        console.log(error);
+    })
+}
+getWeather();
