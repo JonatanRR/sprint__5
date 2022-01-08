@@ -15,9 +15,9 @@ function getData(){
     .then(data => {
         contentJoke.innerText = data.joke;
         //console.log(data.joke);
-        vote.innerHTML = `<button type="button" onclick="getVote(1)">1</button>
-        <button type="button" onclick="getVote(2)">2</button>
-        <button type="button" onclick="getVote(3)">3</button>`
+        vote.innerHTML = `<button class="buttons h3" type="button" onclick="getVote(1)"><span>😓</span></button>
+        <button class="buttons h3" type="button" onclick="getVote(2)"><span>😐</span></button>
+        <button class="buttons h3" type="button" onclick="getVote(3)"><span>😂</span></button>`
     })
     .catch(error => {
         console.log('Ha ocurrido un error', error);
@@ -42,9 +42,9 @@ function getVote(id: number) {
         .then(result => result.json())
         .then(data => {
             contentJoke.innerText = data.value;
-            vote.innerHTML = `<button type="button" onclick="getVote(1)">1</button>
-            <button type="button" onclick="getVote(2)">2</button>
-            <button type="button" onclick="getVote(3)">3</button>`
+            vote.innerHTML = `<button class="buttons h3" type="button" onclick="getVote(1)"><span>😓</span></button>
+            <button class="buttons h3" type="button" onclick="getVote(2)"><span>😐</span></button>
+            <button class="buttons h3" type="button" onclick="getVote(3)"><span>😂</span></button>`
         })
         .catch(error => {
             console.log('Ha ocurrido un error', error);

@@ -14,7 +14,7 @@ function getData() {
         .then(function (data) {
         contentJoke.innerText = data.joke;
         //console.log(data.joke);
-        vote.innerHTML = "<button type=\"button\" onclick=\"getVote(1)\">1</button>\n        <button type=\"button\" onclick=\"getVote(2)\">2</button>\n        <button type=\"button\" onclick=\"getVote(3)\">3</button>";
+        vote.innerHTML = "<button class=\"buttons h3\" type=\"button\" onclick=\"getVote(1)\"><span>\uD83D\uDE13</span></button>\n        <button class=\"buttons h3\" type=\"button\" onclick=\"getVote(2)\"><span>\uD83D\uDE10</span></button>\n        <button class=\"buttons h3\" type=\"button\" onclick=\"getVote(3)\"><span>\uD83D\uDE02</span></button>";
     })["catch"](function (error) {
         console.log('Ha ocurrido un error', error);
     });
@@ -37,7 +37,7 @@ function getVote(id) {
             .then(function (result) { return result.json(); })
             .then(function (data) {
             contentJoke.innerText = data.value;
-            vote.innerHTML = "<button type=\"button\" onclick=\"getVote(1)\">1</button>\n            <button type=\"button\" onclick=\"getVote(2)\">2</button>\n            <button type=\"button\" onclick=\"getVote(3)\">3</button>";
+            vote.innerHTML = "<button class=\"buttons h3\" type=\"button\" onclick=\"getVote(1)\"><span>\uD83D\uDE13</span></button>\n            <button class=\"buttons h3\" type=\"button\" onclick=\"getVote(2)\"><span>\uD83D\uDE10</span></button>\n            <button class=\"buttons h3\" type=\"button\" onclick=\"getVote(3)\"><span>\uD83D\uDE02</span></button>";
         })["catch"](function (error) {
             console.log('Ha ocurrido un error', error);
         });

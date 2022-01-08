@@ -1,5 +1,44 @@
-.cart {
-    width: 1000px;
-    height: 300px;
+
+.weather {
+    height: 10vh;
 }
+.num, .degrees {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+.imge{
+    height: 90%;
+    border-right: 3px solid black;
+}
+.buttons {
+    background-color: rgba(228, 214, 23, 0);
+    border: 0px;
+}
+span {
+    background-color: #efbf2e;
+    border: 1px solid #efbf2e;
+    border-radius: 100%;
+}
+.stain1 {
+    margin-top: 200px;
+    margin-right: -200px;
+    height: 200px;
+}
+.stain2 {
+    margin-top: -150px;
+    //margin-bottom: -100px;
+    padding-top: -100px;
+    height: 690px;
+}
+.stain3 {
+    margin-left: -250px;
+    margin-top: -500px;
+    height: 200px;
+}
+.contentStain {
+    margin-top: -100px;
+    width: 350px;
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";

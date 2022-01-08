@@ -8,20 +8,43 @@
     <link rel="stylesheet" href="./dist\css/main.css">
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="d-flex justify-content-start" id="weather">
-                    <div id="weather_icon"></div>
-                    <div id="num"></div>
-                    <div id="degrees">ºC</div>
+    <div>
+        <div class="container-fluid position-relative" style= "overflow: hidden;">
+            <div class="row">
+                <div class="col-12 bg-white position-relative" style= "overflow: hidden;">
+                    <div class="weather d-inline-flex justify-content-center mt-3 ms-3" id="weather">
+                        <div class="weather_icon" id="weather_icon"></div>
+                        <div class="num ps-4 pt-3" id="num"><bold></bold></div>
+                        <div class="degrees pt-3" id="degrees">ºC</div>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 cart text-center pt-5 bg-danger">
-                <h1 class="pt-5">Preparat per riure?</h1>
-                <div class="pt-5 pb-5" id="contentJoke"></div>
-                <div class="pb-5" id="vote"></div>
-                <button type="button" id="buttonJoke" class="btn btn-info">Següent</button>
+        </div>
+        <div class="container-fluid position-absolute">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-1 ps-5">
+                    <svg class="stain1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#8A3FFC" d="M34.7,-29.7C49,-20.4,67.5,-10.2,68.6,1.1C69.7,12.4,53.5,24.9,39.2,36.3C24.9,47.6,12.4,58,0.8,57.2C-10.9,56.4,-21.8,44.5,-33.7,33.1C-45.7,21.8,-58.7,10.9,-59.3,-0.6C-59.9,-12.1,-48.1,-24.2,-36.1,-33.5C-24.2,-42.9,-12.1,-49.5,-0.9,-48.6C10.2,-47.6,20.4,-39.1,34.7,-29.7Z" transform="translate(100 100)" />
+                    </svg>
+                </div>
+                <div class="col-10 pe-5 d-flex justify-content-center align-items-center">
+                    <div class="colorStain position-relative">
+                        <svg class="stain2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#8A3FFC" d="M41.1,-54.3C56.6,-45.3,74.9,-37.8,82.2,-24.5C89.5,-11.3,85.7,7.7,77.7,23C69.6,38.3,57.1,49.9,43.4,58.2C29.8,66.6,14.9,71.7,-1.1,73.2C-17,74.7,-34.1,72.5,-42.2,62.3C-50.4,52.2,-49.6,34,-53.9,18.2C-58.1,2.3,-67.3,-11.3,-67.1,-24.9C-66.9,-38.5,-57.3,-52.1,-44.6,-61.9C-31.8,-71.8,-15.9,-78,-1.6,-75.8C12.8,-73.7,25.6,-63.2,41.1,-54.3Z" transform="translate(100 100)" />
+                        </svg>
+                    </div>
+                    <div class="contentStain position-absolute text-center">                
+                        <h1 class="title text-white"><strong>Preparat per riure?</strong></h1>
+                        <div class="contentJoke text-white p-5" id="contentJoke"></div>
+                        <div class="vote pb-5" id="vote"></div>
+                        <button type="button" id="buttonJoke" class="buttonJoke btn btn-warning"><strong class="text-white">Següent</strong></button>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <svg class="stain3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#8A3FFC" d="M25.1,-17.5C34.5,1.9,45.5,17.3,41.6,29.1C37.7,41,18.9,49.3,-2.5,50.8C-23.8,52.2,-47.7,46.7,-58.6,30.8C-69.5,14.9,-67.4,-11.4,-55.5,-32.2C-43.6,-52.9,-21.8,-68.1,-7,-64.1C7.8,-60,15.6,-36.8,25.1,-17.5Z" transform="translate(100 100)" />
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
