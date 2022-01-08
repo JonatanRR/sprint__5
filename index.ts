@@ -36,6 +36,25 @@ function getVote(id: number) {
     };
     console.log(reportJokes);
     reportJokes.push(properties);
+    //Exercise 5
+    if(id === 1) { //If vote equal to 1, show Chuck Norris joke
+        fetch("https://api.chucknorris.io/jokes/random")
+        .then(result => result.json())
+        .then(data => {
+            contentJoke.innerText = data.value;
+            vote.innerHTML = `<button type="button" onclick="getVote(1)">1</button>
+            <button type="button" onclick="getVote(2)">2</button>
+            <button type="button" onclick="getVote(3)">3</button>`
+        })
+        .catch(error => {
+            console.log('Ha ocurrido un error', error);
+        })
+    } else {
+        getData();
+    }
+    console.log(properties);
+    console.log(reportJokes);
+    return reportJokes;
 }
 
 //Exercise 4
@@ -50,7 +69,7 @@ function getWeather(){
         weather_icon.innerHTML = `<img class="imge pe-5" src="./icons/${data.weather[0].icon}.png">`
     })
     .catch(error => {
-        console.log(error);
+        console.log('Ha ocurrido un error', error);
     })
 }
 getWeather();
